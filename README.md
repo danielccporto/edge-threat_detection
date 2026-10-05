@@ -69,7 +69,55 @@ python -m src.deploy.export_edge  # compiles the model to pure JS (models/edge/)
 > `data/interim/`, `models/`, and `venv/` are generated and kept out of git. The
 > original CSVs live in `data/raw/`.
 
-## Where the reasoning lives (writeups)
+## Suggested reading path (for reviewers)
+
+To follow the full development — every stage and the reasoning behind each
+decision — read in this order:
+
+1. **Big picture first** → [docs/PROJECT_SUMMARY.md](docs/PROJECT_SUMMARY.md) — a
+   narrated, plain-language walkthrough of the whole project (steps 1–8).
+   Optional companion: [docs/METRICS_EXPLAINED.md](docs/METRICS_EXPLAINED.md)
+   (metrics explained via a simple analogy).
+2. **The data** → [docs/DATA_UNDERSTANDING.md](docs/DATA_UNDERSTANDING.md) —
+   sources, keys (PK/FK), the join model and labeling gaps.
+3. **Part 2, task by task:**
+   - 2.1 Labeling → [reports/2_1_labeling_report.md](reports/2_1_labeling_report.md)
+   - 2.2 Features → [docs/FEATURES.md](docs/FEATURES.md)
+   - 2.3 Baseline → [reports/2_3_model_report.md](reports/2_3_model_report.md),
+     then the critical lens that shaped the final model:
+     [validation](reports/2_3_validation.md) →
+     [hybrid](reports/2_3_hybrid.md) → [tuning](reports/2_3_tuning.md)
+   - 2.4 Edge → [reports/2_4_edge.md](reports/2_4_edge.md)
+4. **Part 3 (trade-off deep-dives):**
+   [3.1 state](reports/3_1_stateful_edge.md) →
+   [3.2 labeling gap](reports/3_2_labeling_bottleneck.md) →
+   [3.3 threshold economics](reports/3_3_threshold_economics.md) →
+   [3.4 adversarial](reports/3_4_adversarial.md)
+5. **Synthesis & rationale** → [reports/1_design.md](reports/1_design.md)
+   (end-to-end design that ties it all together) and
+   [docs/DECISIONS.md](docs/DECISIONS.md) (**the "why" of every choice, D1–D18**,
+   in chronological order — best read alongside the stages above).
+
+> Portuguese versions of every writeup are preserved in
+> [docs/pt/](docs/pt/) (the project was developed in Portuguese; English is primary).
+
+### Part 3 — where each deep-dive question is answered
+
+Each Part 3 question from the assessment is answered in its own document:
+
+| Assessment question | Answered in |
+|---|---|
+| **3.1** Stateless Edge, Stateful Signals | [reports/3_1_stateful_edge.md](reports/3_1_stateful_edge.md) |
+| **3.2** The Labeling Bottleneck | [reports/3_2_labeling_bottleneck.md](reports/3_2_labeling_bottleneck.md) |
+| **3.3** Threshold Economics (with the math) | [reports/3_3_threshold_economics.md](reports/3_3_threshold_economics.md) |
+| **3.4** Adversarial Robustness | [reports/3_4_adversarial.md](reports/3_4_adversarial.md) |
+
+Likewise, **Part 2** tasks map to: 2.1 → [reports/2_1_labeling_report.md](reports/2_1_labeling_report.md);
+2.2 → [docs/FEATURES.md](docs/FEATURES.md); 2.3 → [reports/2_3_model_report.md](reports/2_3_model_report.md)
+(+ validation/hybrid/tuning); 2.4 → [reports/2_4_edge.md](reports/2_4_edge.md). **Part 1** (the main
+design question) → [reports/1_design.md](reports/1_design.md).
+
+### Index of writeups
 
 | Document | Contents |
 |---|---|

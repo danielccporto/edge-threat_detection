@@ -17,6 +17,6 @@ pytest>=7.4
 m2cgen>=0.10          # compila o modelo p/ código sem dependências (JS/C/WASM)
 
 # Opcionais (descomentar se necessário):
-# pandera>=0.18        # validação declarativa de schema
-# onnx>=1.15           # alternativa de export do modelo p/ edge
-# onnxruntime>=1.17
+pandera>=0.18        # validação declarativa de schema
+onnx>=1.15           # alternativa de export do modelo p/ edge
+onnxruntime>=1.17
