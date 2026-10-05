@@ -1,0 +1,42 @@
+{
+  "lgbm_nocountry": {
+    "size_kb_joblib": 213.2,
+    "latency_single": {
+      "mean_ms": 6.2855,
+      "p50_ms": 5.9127,
+      "p99_ms": 9.5189
+    },
+    "throughput": {
+      "batch_n": 14016,
+      "total_s": 0.026,
+      "req_per_s": 538598
+    },
+    "complexity": {
+      "n_trees": 120,
+      "n_nodes": 3480
+    }
+  },
+  "logreg_nocountry": {
+    "size_kb_joblib": 6.0,
+    "latency_single": {
+      "mean_ms": 4.5703,
+      "p50_ms": 4.1633,
+      "p99_ms": 7.2706
+    },
+    "throughput": {
+      "batch_n": 14016,
+      "total_s": 0.0176,
+      "req_per_s": 796752
+    },
+    "complexity": {
+      "n_coef": 36
+    }
+  },
+  "isolationforest": {
+    "n_estimators": 200,
+    "latency_single": {
+      "mean_ms": 12.2138,
+      "p99_ms": 19.5775
+    }
+  }
+}
